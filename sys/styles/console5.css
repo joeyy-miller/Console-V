@@ -1,0 +1,96 @@
+body {
+	background: #000;
+	font-family: 'Inconsolata', monospace;
+	color: #fff;
+	font-size: 20px; }
+body > p {
+    font-size: 14px;
+    margin-top: 0px; }
+
+#consoleDisplay {
+    width: 900px; }
+.float-left {
+	float: left; }
+#topBar {
+	border-left: 1px solid #fff;
+	border-right: 1px solid #fff;
+	border-top: 1px solid #fff;
+	min-height: 23px;
+	text-align: center; }
+#rightBar {
+	width: calc(20% - 2px);
+	display: inline-block;
+	float: right;
+	border-right: 1px solid #fff;
+	min-height: 420px; }
+
+
+#display {
+	width: calc(80% - 1px);
+	min-height: 420px;
+	display: inline-block;
+	border-left: 1px solid #fff; }
+#display > a{
+	white-space: pre; }
+
+#main {
+	border-bottom: 1px solid #fff; }
+
+#inputBar {
+	position: relative; }
+#inputBar > input {
+    margin: 0px;
+    position: absolute;
+    width: 714px;
+	height: 20px;
+    top: -1px;
+    font-size: 16px;
+    font-family: 'Inconsolata', monospace; }
+
+#button {
+	width: calc(20% - 1px);
+	display: inline-block;
+	float: right;
+	border-left: 1px solid #fff; }
+#button > button {
+    border: 1px solid #fff;
+    width: 100%;
+    margin: 0px;
+    font-size: 16px;
+    color: #fff;
+    background: #000;
+    border-radius: 0px;
+    margin: 0px;
+    min-height: 25px; }
+#button > button:active {
+    color: #000;
+    background: #fff; }
+
+span._s {
+	color: #9ed62a;
+}
+span._f {
+	color: #ce2732;
+}
+span._i {
+	font-style: italic;
+}
+
+span._b {
+	font-weight: 700;
+}
+
+@-moz-document url-prefix() {
+    #rightBar {
+		min-height: 440px; }
+	#inputBar > input {
+		height: 18px;
+	}
+}
+
+@media not all and (min-resolution:.001dpcm) { @media
+{
+   #button {
+		color: #F00;
+	}
+}}

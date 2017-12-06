@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!-- ++ v5.0.0a ++ !-->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Console V</title>
+		<script src="sys/kernel/kernel.js"></script>
+		<script type="text/javascript">
+			var programname="no program";
+			var program_desc="no program";
+		</script>
+		<script src="drive1/consoleprogram.js"></script>
+
+		<!-- CSS -->
+		<link href="sys/styles/console5.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
+		<link rel="shortcut icon" href="sys/styles/favicon.ico" type="image/x-icon" />
+
+	</head>
+	<body>
+		<div id="consoleDisplay">
+			<div id="topBar">
+				<a id="time"></a>
+			</div>
+			<div id="main">
+				<div id="display">
+					<a id="line1" ></a><br/>
+					<a id="line2" ></a><br/>
+					<a id="line3" ></a><br/>
+					<a id="line4" ></a><br/>
+					<a id="line5" ></a><br/>
+					<a id="line6" ></a><br/>
+					<a id="line7" ></a><br/>
+					<a id="line8" ></a><br/>
+					<a id="line9" ></a><br/>
+					<a id="line10"></a><br/>
+					<a id="line11"></a><br/>
+					<a id="line12"></a><br/>
+					<a id="line13"></a><br/>
+					<a id="line14"></a><br/>
+					<a id="line15"></a><br/>
+					<a id="line16"></a><br/>
+					<a id="line17"></a><br/>
+					<a id="line18"></a><br/>
+					<a id="line19"></a><br/>
+					<a id="line20"></a><br/>
+				</div>
+				<div id="rightBar">
+				</div>
+			</div>
+			<div id="input">
+				<div id="inputBar">
+					<input onkeydown="entr_ck(event);" id="userInputBar" type="text">
+				</div>
+				<div id="button">
+					<button id="powerButton" onclick='kernel_task("power");'><i class="fa fa-power-off" aria-hidden="true"></i></button>
+				</div>
+			</div>
+		</div>
+		<br><br><br>
+		<div style="font-size: 13px;">build: 5640</div>
+		<div style="font-size: 13px;">&copy;<i>i</i>JD 2017</div>
+		<div style="font-size: 13px;">do not redistribute.</div>
+	</body>
+	<script type="text/javascript">
+		document.onkeydown = function(evt) {
+			evt = evt || window.event;
+			var isEnter = false;
+			if ("key" in evt) { isEnter = (evt.key == "Enter");
+			} else { isEnter = (evt.keyCode == 13); }
+			if (isEnter) {
+				if (!sys.pwrSts && sys.turnOffFlag) {
+					kernel_task("power");
+				}
+			}
+			var isEnter = false;
+			if ("key" in evt) { isText = (evt.key == "t");
+			} else { isText = (evt.keyCode == 84); }
+			if (isText) {
+				if (!(document.getElementById("userInputBar") === document.activeElement)) {
+					document.getElementById("userInputBar").focus();
+					var inputValue = document.getElementById("userInputBar").value;
+					inputValue = inputValue.substring(0,inputValue.length - 1);
+					setTimeout(function() {document.getElementById("userInputBar").value = inputValue;}, 10 );
+				}
+			}
+			var isEscape = false;
+			if ("key" in evt) { isEscape = (evt.key == "Escape" || evt.key == "Esc");
+			} else { isEscape = (evt.keyCode == 27); } 
+			if (isEscape && sys.pwrSts && sys.turnOffFlag) {
+				kernel_task("power");
+			}
+		}
+	</script>
+	<script src="https://use.fontawesome.com/94c754d23c.js"></script>
+</html>
