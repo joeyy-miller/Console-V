@@ -487,9 +487,10 @@ function reg_input() {
 				/* e f g */
 				/* h */
 				case "help":
-					consoleWrite("Console V. All commands are lowercase.")
+					consoleWrite("<span class='_j'>Console V</span>. All commands are lowercase.")
 					consoleWrite("<span class='_b'>system</span>: clear, date, echo, info, off, reload, theme, time, version.");
 					consoleWrite("<span class='_b'>drive</span>: mount, run, drive info.");
+					consoleWrite("<span class='_b'>shortcuts</span>: shutdown - 'esc', power - 'enter', focus to input - 't'.")
 					break;
 				/* i j k l */
 				/* m */
@@ -566,7 +567,7 @@ function reg_input() {
 				/* v */
 				case "version":
 				case "ver":
-					consoleWrite("Console V; Version " + sys.version);
+					consoleWrite("<span class='_j'>Console V</span>; Version " + sys.version);
 					break;
 				/* w x y z */	
 				default:
@@ -619,7 +620,7 @@ function reg_input() {
 						if (document.getElementById("userInputBar").value == console.password) {
 							display.clear();
 							consoleWrite(reg_success + "Password accepted." + end_reg_success);
-							consoleWrite("Welcome to Console V.");
+							consoleWrite("Welcome to <span class='_j'>Console V</span>.");
 							sys.pause();
 						} else {
 							consoleWrite(reg_error + "Incorrect password.");

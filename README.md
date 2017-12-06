@@ -96,7 +96,7 @@ Back end:
  ~ Made back-end command list alphabetical
  ~ Teaked inputBar width to 714px
 
-5640: [5.2] [Dev Version]
+5640: [5.2] [Current Release]
  + Added favicon.
  + Added "noanimation" flag to clear screen, which stays flagged for 100 ms
  	to stop any current animations from appearing after the clear.
@@ -116,3 +116,7 @@ Back end:
  + Added a program description.
  	+ Access this through "drive desc"
  ~ Fixed an issue with lines not showing on the full width of the display.
+
+5645: [5.2.1] [Dev Version]
+ + Added blue '\_b' color
+ + Added new line for keyboard shortcuts to the help command

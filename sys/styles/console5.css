@@ -72,10 +72,13 @@ span._s {
 span._f {
 	color: #ce2732;
 }
+span._j {
+	color: #669def;
+}
+
 span._i {
 	font-style: italic;
 }
-
 span._b {
 	font-weight: 700;
 }
