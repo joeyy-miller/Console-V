@@ -30,6 +30,7 @@ Back end:
 + 3 main objects (Display (display), Console (console), System (sys))
 
 +=+= Version History =+=+
+
 540A4:
  + Added retreive previoustly typed comamnds via arros
  + Last version before the gold beta
