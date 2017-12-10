@@ -124,4 +124,3 @@ var display = new Display();
 var sys = new System();
 var console = new ConsoleController();
 var clearType = new clearTypeController();
-var rght = new rightDisplayController();
