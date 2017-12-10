@@ -118,9 +118,3 @@ document.onkeydown = function(evt) {
 		rght.setFocus();
 	}
 }
-
-/* On Load */
-var display = new Display();
-var sys = new System();
-var console = new ConsoleController();
-var clearType = new clearTypeController();

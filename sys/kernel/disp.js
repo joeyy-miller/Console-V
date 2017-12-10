@@ -171,3 +171,5 @@ class Display {
 	}
 	
 }
+
+var display = new Display();

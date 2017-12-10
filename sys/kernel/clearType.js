@@ -51,3 +51,5 @@ class clearTypeController {
 		}
 	}
 }
+
+var clearType = new clearTypeController();

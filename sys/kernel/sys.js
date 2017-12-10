@@ -83,3 +83,5 @@ class System {
 		}
 	}
 }
+
+var sys = new System();

@@ -108,3 +108,5 @@ class ConsoleController {
 		consoleWrite("It is " + display.getTime());
 	}
 }
+
+var console = new ConsoleController();
