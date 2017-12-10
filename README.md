@@ -86,7 +86,7 @@ Back end:
  	location.
  ~ Changed the left border color in the 'blue' theme
 
-5630 & 5635: [5.1.2] [Current release]
+5630 & 5635: [5.1.2]
  + Added runnumbers as an optional setting.
  + 'Default' is not synomous as 'black' for the theme chooser
  + Added support for more systems
@@ -96,7 +96,7 @@ Back end:
  ~ Made back-end command list alphabetical
  ~ Teaked inputBar width to 714px
 
-5640: [5.2] [Current Release]
+5640: [5.2] 
  + Added favicon.
  + Added "noanimation" flag to clear screen, which stays flagged for 100 ms
  	to stop any current animations from appearing after the clear.
@@ -117,6 +117,35 @@ Back end:
  	+ Access this through "drive desc"
  ~ Fixed an issue with lines not showing on the full width of the display.
 
-5645: [5.2.1] [Dev Version]
+5645: [5.2.1] [Current Release]
  + Added blue '\_b' color
  + Added new line for keyboard shortcuts to the help command
+
+5650: [5.3] [Dev Version]
+ + Introducing ClearType
+	+ Completely new parsing for input
+	+ All input is passed through clear type. 
+	+ Can detect flags that are preceded by '-' characters
+		+ Things such as '-b' to make text bold in the echo command
+	+ Access to variables about the input text:
+		+ firstWord  - the first word from input
+		+ secondWrod - second word
+		+ thirdWord  - third
+		+ firstFlag  - the first flag
+		+ secondFlag - the second flag
+		+ thirdFlag  - the third flag
+		+ inputAfter - the input after all of the flags
+ + Separtion of all objects into separate files
+	+ sys.js        -> system class
+	+ disp.js       -> display class
+	+ console.js    -> consoleController class
+	+ right.js      -> Right Bar controller class
+	+ clearType,.js -> Clear Type  class
+	+ regInput.js   -> Register Input function
+ + Status Bar: New (maybe?) name/funcionality
+ 	+ New rightDisplayController class
+ 	+ Press 'Option' (or 'Alt') key to swtich to the stauts bar
+ 	+ Navigate up/down using the arrows.
+ 	+ Press enter to open up the status bar to show more information 
+ 		+ sys:
+ 			+ shows each variable in the system and the value.

@@ -4,7 +4,17 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Console V</title>
+
+		<script src="sys/kernel/disp.js"></script>
+		<script src="sys/kernel/sys.js"></script>
+		<script src="sys/kernel/console.js"></script>
+		<script src="sys/kernel/clearType.js"></script>
+		<script src="sys/kernel/right.js"></script>
+		<script src="sys/kernel/regInput.js"></script>
+
 		<script src="sys/kernel/kernel.js"></script>
+
+
 		<script type="text/javascript">
 			var programname="no program";
 			var program_desc="no program";
@@ -13,7 +23,6 @@
 
 		<!-- CSS -->
 		<link href="sys/styles/console5.css" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
 		<link rel="shortcut icon" href="sys/styles/favicon.ico" type="image/x-icon" />
 
 	</head>
@@ -58,39 +67,10 @@
 			</div>
 		</div>
 		<br><br><br>
-		<div style="font-size: 13px;">build: 5640</div>
+		<div style="font-size: 13px;">build: 5645b</div>
 		<div style="font-size: 13px;">&copy;<i>i</i>JD 2017</div>
 		<div style="font-size: 13px;">do not redistribute.</div>
 	</body>
-	<script type="text/javascript">
-		document.onkeydown = function(evt) {
-			evt = evt || window.event;
-			var isEnter = false;
-			if ("key" in evt) { isEnter = (evt.key == "Enter");
-			} else { isEnter = (evt.keyCode == 13); }
-			if (isEnter) {
-				if (!sys.pwrSts && sys.turnOffFlag) {
-					kernel_task("power");
-				}
-			}
-			var isEnter = false;
-			if ("key" in evt) { isText = (evt.key == "t");
-			} else { isText = (evt.keyCode == 84); }
-			if (isText) {
-				if (!(document.getElementById("userInputBar") === document.activeElement)) {
-					document.getElementById("userInputBar").focus();
-					var inputValue = document.getElementById("userInputBar").value;
-					inputValue = inputValue.substring(0,inputValue.length - 1);
-					setTimeout(function() {document.getElementById("userInputBar").value = inputValue;}, 10 );
-				}
-			}
-			var isEscape = false;
-			if ("key" in evt) { isEscape = (evt.key == "Escape" || evt.key == "Esc");
-			} else { isEscape = (evt.keyCode == 27); } 
-			if (isEscape && sys.pwrSts && sys.turnOffFlag) {
-				kernel_task("power");
-			}
-		}
-	</script>
 	<script src="https://use.fontawesome.com/94c754d23c.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
 </html>
