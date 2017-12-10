@@ -4,8 +4,8 @@
 class System {
 	constructor() {
 		this.pwrSts = false; // Power off 
-		this.version = "5.2.0";
-		this.versionShort = "5.2b";
+		this.version = "5.3.0a";
+		this.versionShort = "5.3[dev]";
 		this.turnOffFlag = true; // This is used by power function to stop the global 'enter' fucntion from turning the system back on
 		this.program = false; //To see if a program is running
 		this.paused = false; //Used if system input is paused (progarm has taken over)
