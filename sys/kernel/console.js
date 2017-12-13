@@ -48,7 +48,7 @@ class ConsoleController {
 	pullCommandBack() {
 		if (this.cmdHistoryIndex != - 1) {
 			if (this.cmdHistoryIndexSelect == 0)
-			return this.cmdHistory[this.cmdHistoryIndexSelect];
+				return this.cmdHistory[this.cmdHistoryIndexSelect];
 			if (this.cmdHistoryIndexSelect != 0)
 				this.cmdHistoryIndexSelect--;
 			return this.cmdHistory[this.cmdHistoryIndexSelect + 1];
