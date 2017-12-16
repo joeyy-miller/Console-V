@@ -16,7 +16,7 @@ function reg_input() {
 
 
 	if (sys.pwrSts) {
-		if (!sys.program && !sys.paused) { //If system is not running a program
+		if (!sys.program && !sys.paused && !rght.focus) { //If system is not running a program, paused, or focused
 			switch (clearType.firstWord) {
 				/* a */
 				case "a":
@@ -188,7 +188,7 @@ function reg_input() {
 			}
 		} else { //System is running a program or paused
 			if (sys.program) {
-				switch (document.getElementById("userInputBar").value.toLowerCase()) {
+				switch (clearType.firstWord) {
 					case "exit":
 					case "e":
 						sys.program = false;
