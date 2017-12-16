@@ -91,6 +91,8 @@ document.onkeydown = function(evt) {
 	if (isEnter) {
 		if (!sys.pwrSts && sys.turnOffFlag) {
 			kernel_task("power");
+		} else if (rght.focus) {
+			rght.enter();
 		}
 	}
 	var isEnter = false;

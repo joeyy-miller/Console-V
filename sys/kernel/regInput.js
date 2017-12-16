@@ -16,7 +16,7 @@ function reg_input() {
 
 
 	if (sys.pwrSts) {
-		if (!sys.program && !sys.paused) { //If system is not running a program
+		if (!sys.program && !sys.paused && !rght.focus) { //If system is not running a program, paused, or focused
 			switch (clearType.firstWord) {
 				/* a */
 				case "a":
