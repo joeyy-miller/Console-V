@@ -1,4 +1,3 @@
-
 class rightDisplayController {
 	constructor () {
 		this.focus = false; // Does the user have this in focus?
@@ -41,6 +40,12 @@ class rightDisplayController {
 			document.getElementById("option" + this.highlight).style.color = "#000";
 		}
 	}
+
+	enter () {
+		display.consoleWrite("user pressed enter");
+	}
 }
+
+
 
 var rght = new rightDisplayController();
