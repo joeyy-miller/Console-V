@@ -146,6 +146,10 @@ Back end:
  	+ New rightDisplayController class
  	+ Press 'Option' (or 'Alt') key to swtich to the stauts bar
  	+ Navigate up/down using the arrows.
- 	+ Press enter to open up the status bar to show more information 
- 		+ sys:
- 			+ shows each variable in the system and the value.
+ 	+ Press enter to show the status of the item in the console.
+	+ Toggles that enable a kernel panic!
+	+ Toggles that can switch the color in the right hand bar
++ Kernel Panic
+	+ Introduced many new featuers to make a kernel panic more obvious 
+		+ Red labels, makes ConsoleV shutdown and requires reboot.
+
