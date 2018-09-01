@@ -118,7 +118,7 @@ Back end:
  ~ Fixed an issue with lines not showing on the full width of the display.
 
 5645: [5.2.1] [Current Release]
- + Added blue '\_b' color
+ + Added blue '\_j' color
  + Added new line for keyboard shortcuts to the help command
 
 5650: [5.3] [Dev Version]
