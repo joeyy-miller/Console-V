@@ -23,10 +23,10 @@ class System {
 		setTimeout(function() {document.getElementById("rightBar").innerHTML = 'sys sts: ok<br>';}, 200);
 		setTimeout(function() {document.getElementById("rightBar").innerHTML = 'sys sts: ok<br>kernel: ok<br>';}, 300);
 		setTimeout(function() {document.getElementById("rightBar").innerHTML = 'sys sts: ok<br>kernel: ok<br>sudo: ok<br>';}, 350);
-		setTimeout(function() {document.getElementById("rightBar").innerHTML = '<span id="option1">sys sts: ' + kernel_task() + '</span><br><span id="option2">kernel: ok</span><br><span id="option3">sudo: ok</span><br><span id="option4">disp: ' + display.status(); + "</span>"}, 450);
+		setTimeout(function() {document.getElementById("rightBar").innerHTML = '<span id="option1">sys sts: <span class="optcolr">' + kernel_task() + '</span></span><br><span id="option2">kernel: <span class="optcolr">ok</span></span><br><span id="option3">sudo: <span class="optcolr">ok</span></span><br><span id="option4">disp: <span class="optcolr">' + display.status() + "</span></span><br><span id='option5'>enabl colrs</span><br><span id='option6'>trgr kernel panic</span>"}, 450);
 		document.getElementById("rightBar").style.borderLeft = '1px solid #fff';
 	}
-	init_dp() { setTimeout(function() {consoleWrite("Welcome to Console V.")},200); }
+	init_dp() { setTimeout(function() {consoleWrite("Welcome to <span class='_j'>Console V</span>.")},200); }
 	
 	deit_dp() { display.clear();}
 	deit_rb() {
@@ -57,6 +57,8 @@ class System {
 			this.pwrSts = false;
 			this.program = false;
 			console.deit();
+			kernel_task("unpanic");
+			rght.unFocus();
 			display.setColor("reset");
 			document.getElementById("powerButton").setAttribute("onclick","");
 			setTimeout(function() {document.getElementById("powerButton").setAttribute("onclick",'kernel_task("power")');}, 100);

@@ -65,6 +65,9 @@ function reg_input() {
 					console.date();
 					break;
 				/* e */
+				case 'echo':
+					consoleWrite("Write after this command to echo it. Flags: -s[green text] -b[bold text] etc.");
+				break;
 				case "echo ":
 					var output = "";
 					if (clearType.flags) {

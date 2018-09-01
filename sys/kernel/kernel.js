@@ -1,9 +1,23 @@
 /* Kernel Task
 	Used to run the system*/
+var PANIC = false;
 function kernel_task(data1) {
 	switch (data1) {
 		case "panic":
 			display.consoleWrite("<span class='_f'>A Kernel Panic has occured, please restart your system.</span>");
+			document.getElementById("userInputBar").readOnly = true; 
+			document.getElementById("userInputBar").style.backgroundColor = '#ce2732'; 
+			document.getElementById("powerButton").style.backgroundColor = '#ce2732'; 
+			document.getElementById("time").id = "brk-time";
+			PANIC = true;
+			break;
+		case "unpanic":
+			if (PANIC == true) {
+				document.getElementById("userInputBar").readOnly = false; 
+				document.getElementById("userInputBar").style.backgroundColor = '#FFF'; 
+				document.getElementById("powerButton").style.backgroundColor = '#000'; 
+				document.getElementById("brk-time").id = "time";
+			}
 			break;
 		case "display":
 			consoleDisplay(); 
