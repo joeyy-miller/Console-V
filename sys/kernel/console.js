@@ -8,6 +8,7 @@ class ConsoleController {
 		this.cmdHistory = [];
 		this.cmdHistoryIndex = -1;
 		this.cmdHistoryIndexSelect = -1;
+		this.debugMode = false; // Debug Mode
 	} 
 
 	deit() {
@@ -106,6 +107,15 @@ class ConsoleController {
 
 	time() {
 		consoleWrite("It is " + display.getTime());
+	}
+
+	debugMode() {
+		if (this.debugMode == true) {
+			this.debugMode = false;
+		} else {
+			this.debugMode = true;
+			consoleWrite("<span class='_f'>Entering Debug Mode: System corruption may occur. Use caution.</span>")
+		}
 	}
 }
 

@@ -2,7 +2,7 @@ class rightDisplayController {
 	constructor () {
 		this.focus = false; // Does the user have this in focus?
 		this.options = [];
-		this.MENU_LENGTH = 6; // Number of items in the side bar menu
+		this.MENU_LENGTH = 8; // Number of items in the side bar menu
 		this.numStatus = 4; //Number of statuses
 		this.highlight = 1;
 		this.colorsEnable = false;
@@ -28,7 +28,7 @@ class rightDisplayController {
 	}
 
 	downArrow() {
-		if (this.highlight != this.MENU_LENGTH) {
+		if (this.highlight != this.MENU_LENGTH && PANIC != true) {
 			document.getElementById("option" + this.highlight).style.backgroundColor = "#000";
 			document.getElementById("option" + this.highlight).style.color = "#fff";
 			this.highlight++;
@@ -39,7 +39,7 @@ class rightDisplayController {
 
 
 	upArrow() {
-		if (this.highlight != 1) {
+		if (this.highlight != 1 && PANIC != true) {
 			document.getElementById("option" + this.highlight).style.backgroundColor = "#000";
 			document.getElementById("option" + this.highlight).style.color = "#fff";
 			this.highlight--;
@@ -68,16 +68,25 @@ class rightDisplayController {
 					for(var x = 0 ;x < this.numStatus; x++) {
 						document.getElementsByClassName("optcolr")[x].style.color = "#fff";
 					}
+					document.getElementById("option5").style.textDecoration = "none";
 					this.colorsEnable = false;
 				} else {
 					for(var x = 0 ;x < this.numStatus; x++) {
 						document.getElementsByClassName("optcolr")[x].style.color = "#9ed62a";
 					}
+					document.getElementById("option5").style.textDecoration = "underline";
 					this.colorsEnable = true;
 				}
-				
 				break;
 			case 6:
+				/* Debug Mode */
+				consolev.debugMode();
+				break;
+			case 7:
+				/* Run Numbers */
+				display.enabledRunNumbers();
+				break;
+			case 8:
 				kernel_task("panic");
 		}
 	}

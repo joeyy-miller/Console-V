@@ -17,6 +17,7 @@ function kernel_task(data1) {
 				document.getElementById("userInputBar").style.backgroundColor = '#FFF'; 
 				document.getElementById("powerButton").style.backgroundColor = '#000'; 
 				document.getElementById("brk-time").id = "time";
+				PANIC = false;
 			}
 			break;
 		case "display":
