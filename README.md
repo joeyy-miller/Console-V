@@ -1,4 +1,6 @@
-Console V notes
+/*******************************\
+* Console V Development History *
+\*******************************/
 
 Console V is the newest Console OS from iJD software. Console V is completly 
 rebuilt from the ground up using a modern, fast, and more stable kernel. 
@@ -121,7 +123,7 @@ Back end:
  + Added blue '\_j' color
  + Added new line for keyboard shortcuts to the help command
 
-5650: [5.3] [Dev Version]
+5650 & 5655: [5.3] [Dev Version]
  + Introducing ClearType
 	+ Completely new parsing for input
 	+ All input is passed through clear type. 
@@ -142,14 +144,30 @@ Back end:
 	+ right.js      -> Right Bar controller class
 	+ clearType,.js -> Clear Type  class
 	+ regInput.js   -> Register Input function
- + Status Bar: New (maybe?) name/funcionality
+ + Added Sidebar (Right control bar):
  	+ New rightDisplayController class
  	+ Press 'Option' (or 'Alt') key to swtich to the stauts bar
  	+ Navigate up/down using the arrows.
+ 	+ If the item is underlined, it is enabled.
  	+ Press enter to show the status of the item in the console.
-	+ Toggles that enable a kernel panic!
-	+ Toggles that can switch the color in the right hand bar
-+ Kernel Panic
+	+ Toggles:
+		+ toggle text colors -> Enable/disable system wide text colors,
+		for use with non-color displays. (Default on)
+		+ enable debug mode -> Enables the sytem debug mode
+		+ enable run numbers - > Enables the systme run numbers
+		+ Trgr kernel panic -> Triggers a system-wide kernel panic
+	+ Status settings:
+		+ sys stats, kernel, sudo, disp.
+ + Kernel Panic
 	+ Introduced many new featuers to make a kernel panic more obvious 
 		+ Red labels, makes ConsoleV shutdown and requires reboot.
-
+ + Added a debug mode. Mostly provides more logging when running certin commands.
+ + System starts with input bar automatically in focus, ready for commands to be entered
+ + Added "after_load.js" for commands that need to be run after the rest of the DOM elements are present.
+ + Added a link for the development history (README.md)
+ ~ Changed the names of the js files:
+ 	~ regInput -> "reg_input.js"
+ 	~ clearType -> "clear_type.js"
+ ~ Fixed error where typing "Theme " with a blank space would cause no nothing to happen. 
+ ~ Fixed errors in different themes causing incorrect displays
+ ~ Changed some aspects of themes, they now display colors through CSS instead of JS.

@@ -144,6 +144,7 @@ class Display {
 	colorUtility(textColor, bgColor, borderLeft, borderRight) {
 		document.getElementById("display").style.backgroundColor = bgColor;
 		document.getElementById("display").style.color = textColor;
+		document.querySelector("#rightBar > span").style.color = textColor;
 		document.getElementById("rightBar").style.backgroundColor = bgColor;
 		document.getElementById("rightBar").style.color = textColor;
 		document.getElementById("rightBar").style.borderRight = "1px solid " + borderRight;
@@ -151,20 +152,24 @@ class Display {
 	}
 
 	setColor(color) {
+		// Add the current theme to the DOM for CSS control
+		document.getElementById("consoleDisplay").classList.remove(this.theme);
+		document.getElementById("consoleDisplay").classList.add(color);
+
 		if (color == "reset") {
 			display.colorUtility("#fff", "#000", "#fff", "#fff");
 		} else if (color == "white") {
 			display.colorUtility("#000", "#fff", "#000", "#fff");
 			this.theme = "white";
 		} else if (color == "blue") {
-			display.colorUtility("#fff", "#9bc0e5", "#fff", "#fff");
+			display.colorUtility("#fff", "#66ccff", "#fff", "#fff");
 			this.theme = "blue";
 		} else if (color == "sublime") {
 			display.colorUtility("#f8f8f2", "#272822", "#90908a", "#fff");
 			this.theme = "sublime";
-		} else if (color == "black") {
+		} else if (color == "default") {
 			display.setColor("reset");
-			this.theme = "black";
+			this.theme = "default";
 		} else if (color == "init") {
 			display.setColor(this.theme);
 		}

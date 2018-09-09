@@ -30,6 +30,9 @@ class clearTypeController {
 				this.firstWord = this.words[0];
 				this.secondWord = this.words[1];
 				this.thirdWord = this.words[2];
+				if (!this.secondWord) {
+					this.secondWord = " ";
+				}
 			}
 			if (this.flags != null) {
 				this.firstFlag = this.flags[0];

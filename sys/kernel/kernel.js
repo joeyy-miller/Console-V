@@ -64,7 +64,6 @@ function animateMan() {
 function consoleWrite(data1) {
 	display.consoleWrite(data1);
 }
-
 /* Enter Check
    Checks when to submit the user's command
 */
@@ -73,13 +72,13 @@ function entr_ck(e) {
     if (unicode == 13) 
 	{ // Enter Key
 		reg_input('display');
-		console.pushCommand(document.getElementById("userInputBar").value);
+		consolev.pushCommand(document.getElementById("userInputBar").value);
 		document.getElementById("userInputBar").value = "";
 	}
 	if (unicode == 38)
 	{ // Up Arrow
 		if (!rght.focus) 
-			document.getElementById("userInputBar").value = console.pullCommandBack();
+			document.getElementById("userInputBar").value = consolev.pullCommandBack();
 		else {
 			rght.upArrow();
 		}
@@ -87,7 +86,7 @@ function entr_ck(e) {
 	if (unicode == 40)
 	{ // Up Arrow
 		if (!rght.focus) 
-			document.getElementById("userInputBar").value = console.pullCommandForward();
+			document.getElementById("userInputBar").value = consolev.pullCommandForward();
 		else {
 			rght.downArrow();
 		}
@@ -120,6 +119,8 @@ document.onkeydown = function(evt) {
 			inputValue = inputValue.substring(0,inputValue.length - 1);
 			setTimeout(function() {document.getElementById("userInputBar").value = inputValue;}, 10 );
 		}
+		if (consolev.debugMode) {consoleWrite("Text key.")}
+
 	}
 	var isEscape = false;
 	if ("key" in evt) { isEscape = (evt.key == "Escape" || evt.key == "Esc");
@@ -131,7 +132,7 @@ document.onkeydown = function(evt) {
 	if ("key" in evt) { isOption = (evt.key == "Alt" || evt.key == "Option");
 	} else { isOption = (evt.keyCode == 18); } 
 	if (isOption && sys.pwrSts) {
-		consoleWrite("Changing focus.");
 		rght.setFocus();
+		if (consolev.debugMode) {consoleWrite("Option key.")}
 	}
 }

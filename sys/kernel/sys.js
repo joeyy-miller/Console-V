@@ -4,8 +4,8 @@
 class System {
 	constructor() {
 		this.pwrSts = false; // Power off 
-		this.version = "5.3.0a";
-		this.versionShort = "5.3[dev]";
+		this.version = "5.3.0";
+		this.versionShort = "5.3";
 		this.turnOffFlag = true; // This is used by power function to stop the global 'enter' fucntion from turning the system back on
 		this.program = false; //To see if a program is running
 		this.paused = false; //Used if system input is paused (progarm has taken over)
@@ -20,10 +20,13 @@ class System {
 		display.time();
 	}
 	init_rb() {
-		setTimeout(function() {document.getElementById("rightBar").innerHTML = 'sys sts: ok<br>';}, 200);
-		setTimeout(function() {document.getElementById("rightBar").innerHTML = 'sys sts: ok<br>kernel: ok<br>';}, 300);
-		setTimeout(function() {document.getElementById("rightBar").innerHTML = 'sys sts: ok<br>kernel: ok<br>sudo: ok<br>';}, 350);
-		setTimeout(function() {document.getElementById("rightBar").innerHTML = '<span id="option1">sys sts: <span class="optcolr">' + kernel_task() + '</span></span><br><span id="option2">kernel: <span class="optcolr">ok</span></span><br><span id="option3">sudo: <span class="optcolr">ok</span></span><br><span id="option4">disp: <span class="optcolr">' + display.status() + "</span></span><br><span id='option5'>enabl colrs</span><br><span id='option6'>enabl debug mode</span><br><span id='option7'>enabl run num</span><br><span id='option8'>trgr kernel panic</span>"}, 450);
+		setTimeout(function() {document.getElementById("rightBar").innerHTML = '<span id="option1">toggle txt colors</span><br>';}, 200);
+		setTimeout(function() {document.getElementById("rightBar").innerHTML = '<span id="option1">toggle txt colors</span><br>enable debug mode<br>';}, 300);
+		setTimeout(function() {document.getElementById("rightBar").innerHTML = '<span id="option1">toggle txt colors</span><br>enable debug mode<br>enable run num<br>';}, 350);
+		setTimeout(function() {document.getElementById("rightBar").innerHTML = '<span id="option1">toggle txt colors</span><br>enable debug mode<br>enable run num<br>trgr kernel panic';}, 400);
+		setTimeout(function() {document.getElementById("rightBar").innerHTML = '<span id="option1">toggle txt colors</span><br>enable debug mode<br>enable run num<br>trgr kernel panic<br><span id="option5">sys sts: <span class="optcolr">ok</span></span>';}, 500);
+		setTimeout(function() {document.getElementById("rightBar").innerHTML = '<span id="option1">toggle txt colors</span><br>enable debug mode<br>enable run num<br>trgr kernel panic<br><span id="option5">sys sts: <span class="optcolr">ok</span></span><br>kernel: <span class="optcolr">ok</span>';}, 560);
+		setTimeout(function() {document.getElementById("rightBar").innerHTML = "<span id='option1'>toggle txt colors</span><br><span id='option2'>enable debug mode</span><br><span id='option3'>enable run num</span><br><span id='option4'>trgr kernel panic</span><br><span id='option5'>sys sts: <span class='optcolr'>" + kernel_task() + '</span></span><br><span id="option6">kernel: <span class="optcolr">ok</span></span><br><span id="option7">sudo: <span class="optcolr">ok</span></span><br><span id="option8">disp: <span class="optcolr">' + display.status() + "</span></span><br>"; display.setColor("init");}, 600);
 		document.getElementById("rightBar").style.borderLeft = '1px solid #fff';
 	}
 	init_dp() { setTimeout(function() {consoleWrite("Welcome to <span class='_j'>Console V</span>.")},200); }
@@ -56,7 +59,7 @@ class System {
 			this.turnOffFlag = false;
 			this.pwrSts = false;
 			this.program = false;
-			console.deit();
+			consolev.deit();
 			kernel_task("unpanic");
 			rght.unFocus();
 			display.setColor("reset");
@@ -67,15 +70,14 @@ class System {
 			this.deit_tb();
 			this.deit_rb();
 		} else {
+			//Power On System
 			document.getElementById("powerButton").setAttribute("onclick","");
 			setTimeout(function() {document.getElementById("powerButton").setAttribute("onclick",'kernel_task("power")'); sys.turnOffFlag = true;}, 450);
-			//Power On System
 			this.pwrSts = true;
 			this.turnOffFlag = false;
 			this.init_tb();
 			this.init_rb();
-			display.setColor("init");
-			if (console.password) {
+			if (consolev.password) {
 				consoleWrite("Console V is <span class='_b _f'>locked</span>.")
 				consoleWrite("Type your password to continute...")
 				sys.pause("verify");
