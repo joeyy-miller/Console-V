@@ -31,20 +31,20 @@ Back end:
 
 +=+= Version History =+=+
 
-540A4:
+**540A4**:
  + Added retreive previoustly typed comamnds via arros
  + Last version before the gold beta
 
-550B1:
+**550B1**:
  + Gold beta! Last version before offical release
  + Console has deit() function for when the system turns off
  ~ Made sure that previously typed commands clear when system shuts off
 
-5600: [5.0] Launched 12/1/17
+**5600:** [5.0] Launched 12/1/17
  + Console V released by iJD.
 
 
-5610: [5.0.1]
+**5610:** [5.0.1]
  + Added support for more systems
  	- Gecko based CPUs (Firefox, Nightly)
  + Added power from anywhere. You can now press 'enter' anywhere on 
@@ -52,7 +52,7 @@ Back end:
  ~ Changed retreive past commands function so that when at top of stack
  	the user can press 'down arrow' to get back to a black console input.
 
-5620: [5.1.0]
+**5620:** [5.1.0]
  = This update focuses on making transition from 4 to V easier.
  + Added back themes
  	+ Command is 'color [theme]' or 'theme [color]'
@@ -78,7 +78,7 @@ Back end:
  	+ e => exit
  ~ Fixed issue header still saying 'b' (as in beta)
 
-5625: [5.1.1]
+**5625:** [5.1.1]
  + 'Esc' key can now be used as a shutdown button
  ~ Adjusted help command to show new list of commands
  ~ Fixed spelling error in 'that was not a recognized command' prompt.
@@ -86,7 +86,7 @@ Back end:
  	location.
  ~ Changed the left border color in the 'blue' theme
 
-5630 & 5635: [5.1.2]
+**5630 & 5635:** [5.1.2]
  + Added runnumbers as an optional setting.
  + 'Default' is not synomous as 'black' for the theme chooser
  + Added support for more systems
@@ -96,7 +96,7 @@ Back end:
  ~ Made back-end command list alphabetical
  ~ Teaked inputBar width to 714px
 
-5640: [5.2] 
+**5640:** [5.2] 
  + Added favicon.
  + Added "noanimation" flag to clear screen, which stays flagged for 100 ms
  	to stop any current animations from appearing after the clear.
@@ -117,11 +117,11 @@ Back end:
  	+ Access this through "drive desc"
  ~ Fixed an issue with lines not showing on the full width of the display.
 
-5645: [5.2.1] [Current Release]
+**5645:** [5.2.1] [Current Release]
  + Added blue '\_j' color
  + Added new line for keyboard shortcuts to the help command
 
-5650 & 5655: [5.3] [Dev Version]
+**5650 & 5655:** [5.3] [Dev Version]
  + Introducing ClearType
 	+ Completely new parsing for input
 	+ All input is passed through clear type. 
