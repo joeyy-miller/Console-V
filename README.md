@@ -1,6 +1,4 @@
-/*******************************\
-\* Console V Development History *
-\*******************************/
+Console V Development History 
 
 Console V is the newest Console OS from iJD software. Console V is completly 
 rebuilt from the ground up using a modern, fast, and more stable kernel. 
