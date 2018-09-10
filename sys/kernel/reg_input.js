@@ -150,7 +150,7 @@ function reg_input() {
 				case "pass":
 				case "set ":
 				case "setpassword":
-					if (secondWord == "password" || secondWord == null) {
+					if (clearType.secondWord == "password" || clearType.secondWord == null) {
 						consolev.passwordController();
 						break;
 					}

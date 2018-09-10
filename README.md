@@ -117,11 +117,11 @@ Back end:
  	+ Access this through "drive desc"
  ~ Fixed an issue with lines not showing on the full width of the display.
 
-**5645:** [5.2.1] [Current Release]
+**5645:** [5.2.1] 
  + Added blue '\_j' color
  + Added new line for keyboard shortcuts to the help command
 
-**5650 & 5655:** [5.3] [Dev Version]
+**5650 & 5655:** [5.3]
  + Introducing ClearType
 	+ Completely new parsing for input
 	+ All input is passed through clear type. 
@@ -169,3 +169,6 @@ Back end:
  ~ Fixed error where typing "Theme " with a blank space would cause no nothing to happen. 
  ~ Fixed errors in different themes causing incorrect displays
  ~ Changed some aspects of themes, they now display colors through CSS instead of JS.
+
+ **5660:** [5.3.1] [Current Release]
+ ~ Fixed an error with passwords being set.
