@@ -19,7 +19,7 @@ class ConsoleController {
 
 	passwordController() {
 		if (this.password) {
-			if (console.verifyPassword()) {
+			if (consolev.verifyPassword()) {
 				this.password = null;
 				consoleWrite("Password reset.");
 			}
