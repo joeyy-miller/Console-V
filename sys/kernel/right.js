@@ -95,8 +95,10 @@ class rightDisplayController {
 				/* Run Numbers */
 				if (console.runNumEnable == true) {
 					display.enabledRunNumbers();
+					console.runNumEnable = false;
 					document.getElementById("option7").style.textDecoration = "none";
 				} else {
+					console.runNumEnable = true;
 					display.enabledRunNumbers();
 					document.getElementById("option7").style.textDecoration = "underline";
 				}

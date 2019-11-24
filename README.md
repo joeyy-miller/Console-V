@@ -146,13 +146,14 @@ Back end:
  	+ New rightDisplayController class
  	+ Press 'Option' (or 'Alt') key to swtich to the stauts bar
  	+ Navigate up/down using the arrows.
+ 	+ Options that can be toggled are underlined when on.
  	+ Press enter to show the status of the item in the console.
 	+ Toggles that enable a kernel panic!
 	+ Toggles that can switch the color in the right hand bar
  + Kernel Panic
 	+ Introduced many new featuers to make a kernel panic more obvious 
 		+ Red labels, makes ConsoleV shutdown and requires reboot.
- + Added 'Test' command.
+ + Added 'Test' && 'Testing' command.
  	+ Returns a check mark notifiying that the system is working.
 
 59113: [5.3.1] [Dev Version]
