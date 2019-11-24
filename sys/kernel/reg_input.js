@@ -32,14 +32,14 @@ function reg_input() {
 				case "theme":
 					consoleWrite("Use this command to change the look of your system.");
 					consoleWrite("Type color [theme] to select which theme to use.");
-					consoleWrite("Themes installed: Black, White, Blue, Sublime.");
+					consoleWrite("<span class='_b _g'>Themes installed</span>: Black, White, Blue, Sublime.");
 					break;
 				case "color ":
 				case "theme ":
 					switch (clearType.secondWord) {
 						case "black":
 						case "default":
-							display.setColor("black");
+							display.setColor("default");
 							break;
 						case "blue":
 							display.setColor("blue");
@@ -51,8 +51,14 @@ function reg_input() {
 							display.setColor("white");
 							break;
 						default:
-							consoleWrite(reg_error + secondWord + " is not a valid theme.")
+							if (clearType.secondWord != " ") {
+								consoleWrite(reg_error + clearType.secondWord + " is not a valid theme.")
+							} else {
+								document.getElementById("userInputBar").value = "Theme";
+								reg_input();
+							}
 					}
+					consoleWrite("Set theme to <span class='_g _b'>" + display.theme + ".</span>")
 					break;
 				/* d */
 				case "info":
@@ -62,7 +68,7 @@ function reg_input() {
 					break;
 				case "date":
 				case "d":
-					console.date();
+					consolev.date();
 					break;
 				/* e */
 				case 'echo':
@@ -86,6 +92,9 @@ function reg_input() {
 								case "-i":
 									output +="<span class='_i'>";
 									break;
+								case "-g":
+									output +="<span class='_g'>";
+									break;
 							}
 						}
 						output += clearType.inputAfter;
@@ -101,9 +110,9 @@ function reg_input() {
 				/* h */
 				case "help":
 					consoleWrite("<span class='_j'>Console V</span>. All commands are lowercase.")
-					consoleWrite("<span class='_b'>system</span>: clear, date, echo, info, off, reload, theme, time, version.");
-					consoleWrite("<span class='_b'>drive</span>: mount, run, drive info.");
-					consoleWrite("<span class='_b'>shortcuts</span>: shutdown - 'esc', power - 'enter', focus to input - 't'.")
+					consoleWrite("<span class='_g'>system</span>: clear, date, echo, info, off, reload, theme, time, version.");
+					consoleWrite("<span class='_g'>drive</span>: mount, run, drive info.");
+					consoleWrite("<span class='_g'>shortcuts</span>: shutdown - 'esc', power - 'enter', access right bar - 'optn'.")
 					break;
 				/* i j k l */
 				/* m */
@@ -141,8 +150,8 @@ function reg_input() {
 				case "pass":
 				case "set ":
 				case "setpassword":
-					if (secondWord == "password" || secondWord == null) {
-						console.passwordController();
+					if (clearType.secondWord == "password" || clearType.secondWord == null) {
+						consolev.passwordController();
 						break;
 					}
 					break;
@@ -175,7 +184,7 @@ function reg_input() {
 					consoleWrite("<span class='_s'>&#x2713;</span>");
 					break;
 				case "time":
-					console.time();
+					consolev.time();
 					break;
 				/* u */
 				case "unmount":
@@ -215,26 +224,26 @@ function reg_input() {
 				switch (sys.pauseStatus) {
 					case "password":
 						//System is paused to set a password
-						if (!console.password) {
-							console.password = document.getElementById("userInputBar").value;
+						if (!consolev.password) {
+							consolev.password = document.getElementById("userInputBar").value;
 							var star = "";
-							for (var x = 0; x < console.password.length; x++) {
+							for (var x = 0; x < consolev.password.length; x++) {
 								star += "*";
 							}
 							consoleWrite(star);
 							consoleWrite("Type your password again to verify");
 						} else {
-							if (document.getElementById("userInputBar").value == console.password) {
+							if (document.getElementById("userInputBar").value == consolev.password) {
 								consoleWrite(reg_success + "Password accepted." + end_reg_success);
 							} else {
 								consoleWrite(reg_error + "Passwords do not match. Exiting password manager.");
-								console.password = null;
+								consolev.password = null;
 							}
 							sys.pause();
 						}
 						break;
 					case "verify":
-						if (document.getElementById("userInputBar").value == console.password) {
+						if (document.getElementById("userInputBar").value == consolev.password) {
 							display.clear();
 							consoleWrite(reg_success + "Password accepted." + end_reg_success);
 							consoleWrite("Welcome to <span class='_j'>Console V</span>.");

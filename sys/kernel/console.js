@@ -8,7 +8,7 @@ class ConsoleController {
 		this.cmdHistory = [];
 		this.cmdHistoryIndex = -1;
 		this.cmdHistoryIndexSelect = -1;
-		this.debugMode = false; // Debug Mode
+		this.debugMode = false;
 	} 
 
 	deit() {
@@ -19,7 +19,7 @@ class ConsoleController {
 
 	passwordController() {
 		if (this.password) {
-			if (console.verifyPassword()) {
+			if (consolev.verifyPassword()) {
 				this.password = null;
 				consoleWrite("Password reset.");
 			}
@@ -108,6 +108,19 @@ class ConsoleController {
 	time() {
 		consoleWrite("It is " + display.getTime());
 	}
+<<<<<<< HEAD
+=======
+
+	debugModeSetting() {
+		if (this.debugMode == true) {
+			this.debugMode = false;
+			consoleWrite("<span class='_s'>Exited Debug Mode.</span>")
+		} else {
+			this.debugMode = true;
+			consoleWrite("<span class='_f'>Entering Debug Mode: System corruption may occur. Use caution.</span>")
+		}
+	}
+>>>>>>> 7fd564dff81583eef72eaba68613f77e58f5d9c7
 }
 
-var console = new ConsoleController();
+var consolev = new ConsoleController();

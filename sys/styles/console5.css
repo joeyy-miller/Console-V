@@ -7,6 +7,7 @@ body > p {
     font-size: 14px;
     margin-top: 0px; }
 
+/* Display Section */
 #consoleDisplay {
     width: 900px; }
 .float-left {
@@ -23,6 +24,24 @@ body > p {
 	float: right;
 	border-right: 1px solid #fff;
 	min-height: 420px; }
+#rightBar > span {
+	margin-bottom: 10px;
+}
+#rightBar .optcolr {
+	color: rgb(158, 214, 42);
+}
+#rightBar #option1 {
+	text-decoration: underline;
+}
+#option5 {
+	margin-top: 240px;
+	display: inline-block;
+	margin-bottom: 0px !important
+}
+.rightSelected {
+	background-color: #fff;
+	color: #000 !important;
+}
 
 
 #display {
@@ -66,23 +85,31 @@ body > p {
     color: #000;
     background: #fff; }
 
-span._s {
-	color: #9ed62a;
-}
-span._f {
-	color: #ce2732;
-}
-span._j {
-	color: #669def;
-}
+/* Sys Colors */
+span._s { color: #9ed62a; }
+span._g { color: #bfbfbf; }
+span._f { color: #ce2732; }
+span._j { color: #669def; }
+span._i { font-style: italic; }
+span._b { font-weight: 700; }
 
-span._i {
-	font-style: italic;
-}
-span._b {
-	font-weight: 700;
-}
+/* Sys themes */
+/* BLUE theme */
+.blue span._g {color: #737373;}
+.blue span._s {color: #00802b;}
+.blue span._j { color: #000080; }
 
+
+.noColors span._s { color: #fff; }
+.noColors span._f { color: #fff; }
+.noColors span._j { color: #fff; }
+.noColors span._g { color: #fff; }
+
+.white #rightBar span {color: #000 !important;}
+.white.noColors span._s { color: #000; }
+.white.noColors span._f { color: #000; }
+.white.noColors span._j { color: #000; }
+.white.noColors span._g { color: #000; }
 @-moz-document url-prefix() {
     #rightBar {
 		min-height: 440px; }
