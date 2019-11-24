@@ -170,6 +170,9 @@ function reg_input() {
 					break;
 				/* s */
 				/* t */
+				case "test":
+					consoleWrite("<span class='_s'>&#x2713;</span>");
+					break;
 				case "time":
 					console.time();
 					break;

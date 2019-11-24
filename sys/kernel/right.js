@@ -6,6 +6,7 @@ class rightDisplayController {
 		this.numStatus = 4; //Number of statuses
 		this.highlight = 1;
 		this.colorsEnable = false;
+		this.runNumEnable = false;
 	}
 
 	setFocus() {
@@ -80,11 +81,26 @@ class rightDisplayController {
 				break;
 			case 6:
 				/* Debug Mode */
-				consolev.debugMode();
+				if (console.debugMode == true) {
+					console.debugMode = false;
+					document.getElementById("option6").style.textDecoration = "none";
+					consoleWrite("<span class='_s'>Leaving Debug Mode: System safe.</span>")
+				} else {
+					console.debugMode = true;
+					document.getElementById("option6").style.textDecoration = "underline";
+					consoleWrite("<span class='_f'>Entering Debug Mode: System corruption may occur. Use caution.</span>")
+				}
 				break;
 			case 7:
 				/* Run Numbers */
-				display.enabledRunNumbers();
+				if (console.runNumEnable == true) {
+					display.enabledRunNumbers();
+					document.getElementById("option7").style.textDecoration = "none";
+				} else {
+					display.enabledRunNumbers();
+					document.getElementById("option7").style.textDecoration = "underline";
+				}
+				
 				break;
 			case 8:
 				kernel_task("panic");

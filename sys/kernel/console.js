@@ -108,15 +108,6 @@ class ConsoleController {
 	time() {
 		consoleWrite("It is " + display.getTime());
 	}
-
-	debugMode() {
-		if (this.debugMode == true) {
-			this.debugMode = false;
-		} else {
-			this.debugMode = true;
-			consoleWrite("<span class='_f'>Entering Debug Mode: System corruption may occur. Use caution.</span>")
-		}
-	}
 }
 
 var console = new ConsoleController();

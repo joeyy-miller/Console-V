@@ -117,15 +117,15 @@ Back end:
  	+ Access this through "drive desc"
  ~ Fixed an issue with lines not showing on the full width of the display.
 
-5645: [5.2.1] [Current Release]
+5645: [5.2.1]
  + Added blue '\_j' color
  + Added new line for keyboard shortcuts to the help command
 
-5650: [5.3] [Dev Version]
+5650: [5.3] [Current Release]
  + Introducing ClearType
 	+ Completely new parsing for input
 	+ All input is passed through clear type. 
-	+ Can detect flags that are preceded by '-' characters
+	+ Can detect up to 3 flags that are preceded by '-' characters
 		+ Things such as '-b' to make text bold in the echo command
 	+ Access to variables about the input text:
 		+ firstWord  - the first word from input
@@ -142,14 +142,17 @@ Back end:
 	+ right.js      -> Right Bar controller class
 	+ clearType,.js -> Clear Type  class
 	+ regInput.js   -> Register Input function
- + Status Bar: New (maybe?) name/funcionality
+ + System Overview: New name for status bar (right side column) (maybe?) name/funcionality
  	+ New rightDisplayController class
  	+ Press 'Option' (or 'Alt') key to swtich to the stauts bar
  	+ Navigate up/down using the arrows.
  	+ Press enter to show the status of the item in the console.
 	+ Toggles that enable a kernel panic!
 	+ Toggles that can switch the color in the right hand bar
-+ Kernel Panic
+ + Kernel Panic
 	+ Introduced many new featuers to make a kernel panic more obvious 
 		+ Red labels, makes ConsoleV shutdown and requires reboot.
+ + Added 'Test' command.
+ 	+ Returns a check mark notifiying that the system is working.
 
+59113: [5.3.1] [Dev Version]
