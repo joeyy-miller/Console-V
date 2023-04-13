@@ -1,3 +1,11 @@
+## Console V
+
+This was the very first project I started. It proviedes an enviorment to create applications on a terminal like interface inside of a web browser. It provides a level of abstraction and an API to create applications to simulate running on an old computer. You can make an application that provides output to the user, and get input from what the user types in the status bar from their keyboard.
+
+It was made to teach me about OS design, UX, coding abstraction, and computer science concepts. I use the alias `iJD` as the name of the fictional company that releases this product as a general purpose operating system.
+
+There have been 5 major releases, which version 5 (V) the most recent and powerful.
+
 ## Console V Development History 
 
 Console V is the newest Console OS from iJD software. Console V is completly 
