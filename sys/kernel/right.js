@@ -76,7 +76,6 @@ class rightDisplayController {
 				break;
 			case 2:
 				/* Debug Mode */
-<<<<<<< HEAD
 				if (console.debugMode == true) {
 					console.debugMode = false;
 					document.getElementById("option6").style.textDecoration = "none";
@@ -86,15 +85,12 @@ class rightDisplayController {
 					document.getElementById("option6").style.textDecoration = "underline";
 					consoleWrite("<span class='_f'>Entering Debug Mode: System corruption may occur. Use caution.</span>")
 				}
-=======
 				consolev.debugModeSetting();
 				if (consolev.debugMode == true) {document.getElementById("option2").style.textDecoration = "underline"; }
 				else { document.getElementById("option2").style.textDecoration = "none"; }
->>>>>>> 7fd564dff81583eef72eaba68613f77e58f5d9c7
 				break;
 			case 3:
 				/* Run Numbers */
-<<<<<<< HEAD
 				if (console.runNumEnable == true) {
 					display.enabledRunNumbers();
 					console.runNumEnable = false;
@@ -105,11 +101,9 @@ class rightDisplayController {
 					document.getElementById("option7").style.textDecoration = "underline";
 				}
 				
-=======
 				display.enabledRunNumbers();
 				if (display.runLines == true) {document.getElementById("option3").style.textDecoration = "underline"; }
 				else { document.getElementById("option3").style.textDecoration = "none"; }
->>>>>>> 7fd564dff81583eef72eaba68613f77e58f5d9c7
 				break;
 			
 			case 4:

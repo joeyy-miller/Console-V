@@ -4,11 +4,7 @@
 class System {
 	constructor() {
 		this.pwrSts = false; // Power off 
-<<<<<<< HEAD
 		this.version = "5.3.0";
-=======
-		this.version = "5.3.1";
->>>>>>> 7fd564dff81583eef72eaba68613f77e58f5d9c7
 		this.versionShort = "5.3";
 		this.turnOffFlag = true; // This is used by power function to stop the global 'enter' fucntion from turning the system back on
 		this.program = false; //To see if a program is running
@@ -24,12 +20,10 @@ class System {
 		display.time();
 	}
 	init_rb() {
-<<<<<<< HEAD
 		setTimeout(function() {document.getElementById("rightBar").innerHTML = 'sys sts: ok<br>';}, 200);
 		setTimeout(function() {document.getElementById("rightBar").innerHTML = 'sys sts: ok<br>kernel: ok<br>';}, 300);
 		setTimeout(function() {document.getElementById("rightBar").innerHTML = 'sys sts: ok<br>kernel: ok<br>sudo: ok<br>';}, 350);
 		setTimeout(function() {document.getElementById("rightBar").innerHTML = '<span class="_j" id="right_title">System Overviewd</span><br><span id="option1">sys sts: <span class="optcolr">' + kernel_task() + '</span></span><br><span id="option2">kernel: <span class="optcolr">ok</span></span><br><span id="option3">sudo: <span class="optcolr">ok</span></span><br><span id="option4">disp: <span class="optcolr">' + display.status() + "</span></span><br><span id='option5'>enabl colors</span><br><span id='option6'>enabl debug mode</span><br><span id='option7'>enabl run num</span><br><span id='option8'>trgr kernel panic</span>"}, 450);
-=======
 		setTimeout(function() {document.getElementById("rightBar").innerHTML = '<span id="option1">toggle txt colors</span><br>';}, 200);
 		setTimeout(function() {document.getElementById("rightBar").innerHTML = '<span id="option1">toggle txt colors</span><br>enable debug mode<br>';}, 300);
 		setTimeout(function() {document.getElementById("rightBar").innerHTML = '<span id="option1">toggle txt colors</span><br>enable debug mode<br>enable run num<br>';}, 350);
@@ -37,7 +31,6 @@ class System {
 		setTimeout(function() {document.getElementById("rightBar").innerHTML = '<span id="option1">toggle txt colors</span><br>enable debug mode<br>enable run num<br>trgr kernel panic<br><span id="option5">sys sts: <span class="optcolr">ok</span></span>';}, 500);
 		setTimeout(function() {document.getElementById("rightBar").innerHTML = '<span id="option1">toggle txt colors</span><br>enable debug mode<br>enable run num<br>trgr kernel panic<br><span id="option5">sys sts: <span class="optcolr">ok</span></span><br>kernel: <span class="optcolr">ok</span>';}, 560);
 		setTimeout(function() {document.getElementById("rightBar").innerHTML = "<span id='option1'>toggle txt colors</span><br><span id='option2'>enable debug mode</span><br><span id='option3'>enable run num</span><br><span id='option4'>trgr kernel panic</span><br><span id='option5'>sys sts: <span class='optcolr'>" + kernel_task() + '</span></span><br><span id="option6">kernel: <span class="optcolr">ok</span></span><br><span id="option7">sudo: <span class="optcolr">ok</span></span><br><span id="option8">disp: <span class="optcolr">' + display.status() + "</span></span><br>"; display.setColor("init");}, 600);
->>>>>>> 7fd564dff81583eef72eaba68613f77e58f5d9c7
 		document.getElementById("rightBar").style.borderLeft = '1px solid #fff';
 	}
 	init_dp() { setTimeout(function() {consoleWrite("Welcome to <span class='_j'>Console V</span>.")},200); }
