@@ -129,7 +129,7 @@ class Display {
 	    if (m < 10) {m = "0" + m};
 	    if (s < 10) {s = "0" + s};
 	    if (h < 1) {h = "12"} // 0 hours or 12 am
-	    if (h > 12) {h-=12;s += " pm"}else{s+=" am"};
+	    if (h >= 12) {if(h != 12){h-=12;} s += " pm"}else{s+=" am"};
 		return h + ":" + m + ":" + s;
 	}
 
