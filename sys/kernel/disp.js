@@ -121,6 +121,7 @@ class Display {
 		}
 	}
 
+	/* Returns the time in the format hh:mm:ss am/pm */
 	getTime() {
 		var today = new Date();
 	    var h = today.getHours();
@@ -133,6 +134,7 @@ class Display {
 		return h + ":" + m + ":" + s;
 	}
 
+	/* Updates the time on the display */
 	time() {
 	    document.getElementById('time').innerHTML = display.getTime();
 	    if (sys.pwrSts)
@@ -141,6 +143,7 @@ class Display {
 			document.getElementById("time").innerHTML = '';
 	}
 
+	/* The utility that sets the actual element colors */
 	colorUtility(textColor, bgColor, borderLeft, borderRight) {
 		document.getElementById("display").style.backgroundColor = bgColor;
 		document.getElementById("display").style.color = textColor;
@@ -151,6 +154,7 @@ class Display {
 		document.getElementById("rightBar").style.borderLeft = "1px solid " + borderLeft;
 	}
 
+	/* Sets the color theme of the display */
 	setColor(color) {
 		// Add the current theme to the DOM for CSS control
 		document.getElementById("consoleDisplay").classList.remove(this.theme);
