@@ -131,7 +131,6 @@ Back end:
  + Added new line for keyboard shortcuts to the help command
 
 5650: [5.3] [Current Release]
-=======
 **5645:** [5.2.1] 
  + Added blue '\_j' color
  + Added new line for keyboard shortcuts to the help command
@@ -157,7 +156,6 @@ Back end:
 	+ right.js      -> Right Bar controller class
 	+ clearType,.js -> Clear Type  class
 	+ regInput.js   -> Register Input function
-<<<<<<< HEAD
  + System Overview: New name for status bar (right side column) (maybe?) name/funcionality
  	+ New rightDisplayController class
  	+ Press 'Option' (or 'Alt') key to swtich to the stauts bar
@@ -172,8 +170,7 @@ Back end:
  + Added 'Test' && 'Testing' command.
  	+ Returns a check mark notifiying that the system is working.
 
-59113: [5.3.1] [Dev Version]
-=======
+59113: [5.3.1] [Current Release]
  + Added Sidebar (Right control bar):
  	+ New rightDisplayController class
  	+ Press 'Option' (or 'Alt') key to swtich to the stauts bar
@@ -202,6 +199,7 @@ Back end:
  ~ Fixed errors in different themes causing incorrect displays
  ~ Changed some aspects of themes, they now display colors through CSS instead of JS.
 
- **5660:** [5.3.1] [Current Release]
+ **5660:** [5.3.2] [Dev Version]
  ~ Fixed an error with passwords being set.
->>>>>>> 7fd564dff81583eef72eaba68613f77e58f5d9c7
+ + Added Better Commenting
+ + Updated README for errors
