@@ -88,8 +88,14 @@ class System {
 	
 	// Deinitilize task bar
 	deit_tb() {
-		setTimeout(function() {document.getElementById("topBar").innerHTML = '<a id="time"></a>';}, 50);
-		setTimeout(function() {document.getElementById("topBar").style.borderBottom = 'none';},100);
+		
+		setTimeout(function() {
+			document.getElementById("topBar").innerHTML = '<a id="time"></a>';
+		}, 50);
+		setTimeout(function() {
+			document.getElementById("topBar").style.borderBottom = 'none';
+		},100);
+
 		display.time(); }
 
 
@@ -116,15 +122,21 @@ class System {
 			rght.unFocus();
 			display.setColor("reset");
 			document.getElementById("powerButton").setAttribute("onclick","");
-			setTimeout(function() {document.getElementById("powerButton").setAttribute("onclick",'kernel_task("power")');}, 100);
-			setTimeout(function(){ sys.turnOffFlag = true; }, 100);
+			setTimeout(function() {
+				document.getElementById("powerButton").setAttribute("onclick",'kernel_task("power")');
+			}, 100);
+			setTimeout(function(){ 
+				sys.turnOffFlag = true; 
+			}, 100);
 			this.deit_dp();
 			this.deit_tb();
 			this.deit_rb();
 		} else {
 			//Power On System
 			document.getElementById("powerButton").setAttribute("onclick","");
-			setTimeout(function() {document.getElementById("powerButton").setAttribute("onclick",'kernel_task("power")'); sys.turnOffFlag = true;}, 450);
+			setTimeout(function() {
+				document.getElementById("powerButton").setAttribute("onclick",'kernel_task("power")'); sys.turnOffFlag = true;
+			}, 450);
 			this.pwrSts = true;
 			this.turnOffFlag = false;
 			this.init_tb();

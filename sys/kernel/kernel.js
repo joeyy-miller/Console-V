@@ -99,6 +99,7 @@ function entr_ck(e) {
 */
 document.onkeydown = function(evt) {
 	evt = evt || window.event;
+	// Enter Key
 	var isEnter = false;
 	if ("key" in evt) { isEnter = (evt.key == "Enter");
 	} else { isEnter = (evt.keyCode == 13); }
@@ -109,7 +110,9 @@ document.onkeydown = function(evt) {
 			rght.enter();
 		}
 	}
-	var isEnter = false;
+
+	// T Key (text key)
+	var isText = false;
 	if ("key" in evt) { isText = (evt.key == "t");
 	} else { isText = (evt.keyCode == 84); }
 	if (isText) {
@@ -122,12 +125,15 @@ document.onkeydown = function(evt) {
 		if (consolev.debugMode) {consoleWrite("Text key.")}
 
 	}
+	// Esacpe key
 	var isEscape = false;
 	if ("key" in evt) { isEscape = (evt.key == "Escape" || evt.key == "Esc");
 	} else { isEscape = (evt.keyCode == 27); } 
 	if (isEscape && sys.pwrSts && sys.turnOffFlag) {
 		kernel_task("power");
 	}
+
+	// Option Key
 	var isOption = false;
 	if ("key" in evt) { isOption = (evt.key == "Alt" || evt.key == "Option");
 	} else { isOption = (evt.keyCode == 18); } 
