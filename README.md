@@ -40,7 +40,7 @@ Back end:
 +=+= Version History =+=+
 
 **540A4**:
- + Added retreive previoustly typed comamnds via arros
+ + Added retreive previoustly typed comamnds via arrows
  + Last version before the gold beta
 
 **550B1**:
@@ -125,7 +125,6 @@ Back end:
  	+ Access this through "drive desc"
  ~ Fixed an issue with lines not showing on the full width of the display.
 
-<<<<<<< HEAD
 5645: [5.2.1]
  + Added blue '\_j' color
  + Added new line for keyboard shortcuts to the help command
